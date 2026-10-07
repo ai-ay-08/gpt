@@ -1,12 +1,19 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.css',
+  imports: [FormsModule],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('frontend');
+  article: string = '';
+  summary: string = 'Your summary will appear here.';
+
+  summarizeArticle() {
+    console.log(this.article);
+
+    this.summary = "what the fuck is " + this.article;
+  }
 }
