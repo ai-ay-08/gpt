@@ -9,11 +9,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class App {
   article: string = '';
-  summary: string = 'Your summary will appear here.';
+  summary: string = '';
 
-  summarizeArticle() {
-    console.log(this.article);
-
+  summarizeArticle() { // summarization logic here
     this.summary = "what the fuck is " + this.article;
   }
 }
